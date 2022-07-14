@@ -1,12 +1,19 @@
 import './App.css';
 import Background from './Background';
 import Intro from './Intro';
+import Monitor from './Monitor';
+import About from "./About"
+import Sidebar from './Sidebar';
+
 
 function App() {
   return (
     <div className="App">
-    <Intro/>
-      <Background />
+      <Sidebar/>
+      <Intro />
+      {/* <Monitor /> */}
+      <About />
+      {/* <Background /> */}
     </div>
   );
 }
