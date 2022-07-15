@@ -1,0 +1,35 @@
+* {
+    /* background: rgba(153, 86, 86, 0.507); */
+}
+
+@media (max-width: 1000px) {
+
+    p, h1, h2, h3 {
+        padding-left: 1rem;
+    }
+
+    .intro-content:nth-child(2), :nth-child(3) {
+        /* color: red; */
+        max-width: 90vw;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .skills-container {
+        max-width: 80vw;
+    }
+
+    .desk {
+        width: 100vw;
+        display: none;
+    }
+
+    .text-padding-s {
+        /* max-width: 30rem; */
+        margin: auto;
+        text-align: left;
+        padding-bottom: 2rem;
+    }
+}

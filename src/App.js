@@ -4,6 +4,7 @@ import Intro from './Intro';
 import Monitor from './Monitor';
 import About from "./About"
 import Sidebar from './Sidebar';
+import "./Responsive.css"
 
 
 function App() {

@@ -8,6 +8,8 @@
 
 *, *::after *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -22,8 +24,8 @@ code {
 
 body {
   /* background: rgb(150, 143, 143); */
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -34,18 +36,21 @@ body {
 }
 
 .background-container {
-  /* display: flex;
-  flex-direction: column; */
+}
+
+.text-padding-s {
+  /* width: 40rem; */
+  max-width: 40;
+  margin: auto;
+  text-align: left;
+  padding-bottom: 2rem;
 }
 
 .intro-container {
   background-color: var(--clr-a);
-
 }
 
 .intro-content {
-  /* margin-top: 20rem; */
-  /* border: 3px solid black; */
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
@@ -55,8 +60,6 @@ body {
 
 .skills-container {
   display: flex;
-  /* display: grid; */
-  /* grid-template-columns: repeat(4, 6rem); */
   column-gap: .75rem;
   padding: 15px;
   font-size: 1.5rem;
@@ -65,7 +68,6 @@ body {
   width: 40rem;
   margin: auto;
   border-radius: 10px;
-
 }
 
 .skills-content {
@@ -73,7 +75,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
-  /* border: 2px solid black; */
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid var(--clr-a);
@@ -83,26 +84,14 @@ body {
   font-size: 1.4rem;
 }
 
-.skills-content::after {
-  content: "";
-}
 
 .skills-content p {
   font-weight: 500;
-  /* background: rgb(159, 178, 185); */
   padding: 5px;
   text-decoration: overline 2px;
-  /* font-family: source-code-pro; */
 }
 
-.text-padding-s {
-  /* text-align: left; */
-  width: 40rem;
-  margin: auto;
-  text-align: left;
-  padding-bottom: 2rem;
-  /* margin: auto; */
-}
+
 
 .emphasise-text {
   font-size: 3rem;
@@ -122,7 +111,6 @@ body {
 
 .contact {
   position: absolute;
-  /* border-radius: 5px; */
   margin-top: 3rem;
   width: 12rem;
   font-weight: 600;
@@ -130,7 +118,6 @@ body {
   monospace;
   cursor: pointer;
   border: 3px solid rgba(5, 5, 5, 0.808);
-  /* border: 3px solid black; */
 }
 
 .contact:hover {
@@ -159,8 +146,8 @@ body {
 .sidebar {
   width: 8rem;
   background: rgb(74, 74, 78);
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
 }
 
 .text-left {}
@@ -247,7 +234,6 @@ body {
   height: .5rem;
   width: 12rem;
   background: rgb(82, 76, 76);
-  /* margin-right: 7rem; */
 }
 
 .mouse {
@@ -257,7 +243,6 @@ body {
   border-top-right-radius: 50px;
   background: rgb(68, 83, 133);
   margin-left: 2rem;
-
 }
 
 .bottle {
@@ -281,3 +266,4 @@ body {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
+
