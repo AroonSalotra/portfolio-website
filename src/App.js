@@ -5,6 +5,7 @@ import Monitor from './Monitor';
 import About from "./About"
 import Sidebar from './Sidebar';
 import "./Responsive.css"
+import Work from './Work';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       {/* <Monitor /> */}
       <About />
       {/* <Background /> */}
+      <Work />
     </div>
   );
 }

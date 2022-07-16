@@ -5,7 +5,7 @@ import Icons3 from "./Icons3";
 const About = () => {
     return (
         <div className="about-container">
-            <h2 className="text-left">Skills</h2>
+            <h2 className="sub-title">Skills</h2>
             <p>Languages</p>
             <Icons1 />
             <p>Planning & Version Control</p>

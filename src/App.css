@@ -1,9 +1,13 @@
 :root {
-  --clr-b: rgb(160, 80, 80);
+  /* --clr-b: rgb(160, 80, 80);
   --clr-a: rgb(141, 163, 177);
 
-  --clr-code-bg: rgb(182, 88, 88);
-  --clr-code-hl: rgb(87, 86, 86);
+  --clr-code-b: rgb(211, 185, 185);
+  --clr-code-hl: rgb(87, 86, 86); */
+
+
+  --clr-code-a: rgb(226, 221, 221);
+  --clr-code-b: rgb(146, 152, 168);
 }
 
 *, *::after *::before {
@@ -26,28 +30,44 @@ body {
   /* background: rgb(150, 143, 143); */
   /* margin: 0;
   padding: 0; */
-  text-align: center;
+  /* text-align: center; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(214, 213, 164);
+  /* background-color: rgb(214, 213, 164); */
+  background: var(--clr-code-b);
 }
 
-.background-container {
+p, h1, h2, h3, h4 {
+  text-align: left;
 }
+
+.background-container {}
 
 .text-padding-s {
   /* width: 40rem; */
-  max-width: 40;
+  max-width: 42rem;
   margin: auto;
-  text-align: left;
-  padding-bottom: 2rem;
+  /* text-align: left; */
+  /* padding-bottom: 2rem; */
+  height: 23rem;
+}
+
+.text-padding-s :nth-child(1) {
+  font-size: 2rem;
+}
+
+.text-padding-s :nth-child(2) {
+  font-size: 3.5rem;
+  border-bottom: 2px solid black;
 }
 
 .intro-container {
-  background-color: var(--clr-a);
+  /* border-bottom: 3px solid rgb(3, 3, 3); */
 }
 
 .intro-content {
@@ -55,19 +75,18 @@ body {
   flex-direction: column;
   padding-bottom: 2rem;
   font-size: 1.5rem;
+  background: var(--clr-code-a);
 }
-
 
 .skills-container {
   display: flex;
   column-gap: .75rem;
   padding: 15px;
-  font-size: 1.5rem;
-  background: var(--clr-b);
+  background: var(--clr-code-a);
   justify-content: center;
   width: 40rem;
   margin: auto;
-  border-radius: 10px;
+  border-left: 10px solid rgb(82, 78, 78);
 }
 
 .skills-content {
@@ -75,23 +94,16 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid var(--clr-a);
-  border-top: 10px solid var(--clr-a);
   border-radius: 20px;
   width: 5rem;
   font-size: 1.4rem;
 }
-
 
 .skills-content p {
   font-weight: 500;
   padding: 5px;
   text-decoration: overline 2px;
 }
-
-
 
 .emphasise-text {
   font-size: 3rem;
@@ -100,14 +112,30 @@ body {
 }
 
 .btn {
-  height: 4rem;
+  height: 3rem;
   width: 12rem;
-  background: var(--clr-a);
-  border: 3px solid rgb(17, 16, 16);
-  /* border-radius: 5px; */
+  /* border: 2px solid rgb(17, 16, 16); */
+  /* background: rgb(117, 113, 113); */
+  /* background: var(--clr-code-b); */
+  border: 2px solid black;
+  border-top-left-radius: 10px;
+  /* border-left: 7px solid black; */
   margin: auto;
+  /* margin-top: 3rem; */
   cursor: pointer;
 }
+
+.btn:hover {
+  background: rgb(174, 201, 166);
+}
+
+.btn, code {
+  padding-top: 1rem;
+}
+
+.btn:hover {}
+
+.contact-container {}
 
 .contact {
   position: absolute;
@@ -115,7 +143,7 @@ body {
   width: 12rem;
   font-weight: 600;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+    monospace;
   cursor: pointer;
   border: 3px solid rgba(5, 5, 5, 0.808);
 }
@@ -134,7 +162,7 @@ body {
   /* border: 3px solid black; */
   width: max-content;
   margin: auto;
-  text-align: left;
+  /* text-align: left; */
 }
 
 .about-container p {
@@ -144,20 +172,46 @@ body {
 }
 
 .sidebar {
-  width: 8rem;
-  background: rgb(74, 74, 78);
+  width: fit-content;
+  padding-right: 1rem;
+  background: var(--clr-code-a);
   height: 100vh;
   position: fixed;
+  border-right: 2px solid black;
 }
 
-.text-left {}
+.sidebar ul {
+  list-style: none;
+  font-size: 2.2rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.sidebar ul li {
+  cursor: pointer;
+}
+
+.sub-title {
+  border-bottom: 2px solid black;
+  /* width: 15rem; */
+}
+
+.work-container {
+  height: 20rem;
+  background: var(--clr-code-a);
+  /* width: 50rem; */
+  margin: auto;
+  margin-top: 2rem;
+}
 
 .monitor-container {
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(179, 179, 120);
+  /* background: rgb(179, 179, 120); */
 }
 
 .monitor-container>div {
@@ -203,7 +257,7 @@ body {
   height: 9.6rem;
   border-left: 30px solid var(--clr-code-hl);
   border-top: 7px solid var(--clr-code-hl);
-  background: var(--clr-code-bg);
+  background: var(--clr-code-b);
 }
 
 .screen-b-window {
@@ -212,7 +266,6 @@ body {
   background: rgb(212, 211, 197);
   border-top: 7px solid green;
 }
-
 
 .monitor-stand-b {
   width: 5rem;
@@ -266,4 +319,3 @@ body {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
-
