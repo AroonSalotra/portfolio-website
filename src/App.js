@@ -8,20 +8,29 @@ import "./Responsive.css"
 import Work from './Work';
 import ContactForm from './ContactForm';
 
-import { BrowserRouter, Route, Switch } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <BrowserRouter>
+
       <Navbar />
-      <Intro />
-      {/* <Monitor /> */}
-      <About />
-      {/* <Background /> */}
-      <Work />
-      <ContactForm />
-    </div>
+
+      <Routes>
+        <Route exact path='/' element={<><Intro /><About /></>} />
+        <Route exact path='/contact' element={<ContactForm />} />
+      </Routes>
+
+      {/* <Intro /> */}
+
+      {/* <About /> */}
+
+      {/* <Work /> */}
+
+      {/* <ContactForm /> */}
+
+    </BrowserRouter>
   );
 }
 

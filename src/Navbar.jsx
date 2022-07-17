@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsBoxArrowLeft, BsBoxArrowRight } from "react-icons/bs"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [display, setDisplay] = useState("Navbar")
@@ -24,8 +25,8 @@ const Navbar = () => {
     }
 
     const listContent = [
-        { text: "About", hasClass: (hover) },
-        { text: "Contact", hasClass: (hover) },
+        { text: "Home", hasClass: (hover), redirect: "/" },
+        { text: "Contact", hasClass: (hover), redirect: "/contact" },
         { text: "Work", hasClass: (hover) },
         { text: "Resume", hasClass: (hover) },
         { text: "", hasClass: "li-break" + (opacity) },
@@ -36,9 +37,15 @@ const Navbar = () => {
         <div>
             <div className={display}>
                 <ul>
-                    {listContent.map(({ text, clickEffect, hasClass }) =>
-                        <li key={text} onClick={clickEffect ? clickEffect : null}
-                            className={hasClass ? hasClass : null}>{text}</li>
+                    {listContent.map(({ text, clickEffect, hasClass, redirect }) =>
+                        redirect ? <Link to={redirect} key={text}>
+                            <li onClick={clickEffect ? clickEffect : null}
+                                className={hasClass ? hasClass : null}>{text}</li>
+                        </Link>
+                            :
+                            <li key={text} onClick={clickEffect ? clickEffect : null}
+                                className={hasClass ? hasClass : null}>{text}</li>
+
                     )}
                 </ul>
             </div>
