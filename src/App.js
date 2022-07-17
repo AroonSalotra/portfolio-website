@@ -18,8 +18,10 @@ const App = () => {
       <Navbar />
 
       <Routes>
-        <Route exact path='/' element={<><Intro /><About /></>} />
+        <Route exact path='/' element={<><Intro /><About/><Work/></>} />
         <Route exact path='/contact' element={<ContactForm />} />
+        <Route exact path='/work' element={<Work/>} />
+        {/* <Route exact path='/resume' element={<Resume/>} /> */}
       </Routes>
 
       {/* <Intro /> */}

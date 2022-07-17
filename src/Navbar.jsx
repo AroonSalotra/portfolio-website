@@ -20,15 +20,14 @@ const Navbar = () => {
             setHover("hover-color cursor-pointer")
             setRotate("rotate-180 icon-Navbar padding-left")
             setOpacity("")
-
         }
     }
 
     const listContent = [
         { text: "Home", hasClass: (hover), redirect: "/" },
         { text: "Contact", hasClass: (hover), redirect: "/contact" },
-        { text: "Work", hasClass: (hover) },
-        { text: "Resume", hasClass: (hover) },
+        { text: "Work", hasClass: (hover), redirect: "/work" },
+        { text: "Resume", hasClass: (hover), redirect: "/resume" },
         { text: "", hasClass: "li-break" + (opacity) },
         { text: <BsBoxArrowRight />, hasClass: (rotate), clickEffect: () => handleClick() },
     ]
@@ -38,7 +37,7 @@ const Navbar = () => {
             <div className={display}>
                 <ul>
                     {listContent.map(({ text, clickEffect, hasClass, redirect }) =>
-                        redirect ? <Link to={redirect} key={text}>
+                        redirect ? <Link to={redirect} key={text} className={opacity} style={{ color: "black", textDecoration: "none" }}>
                             <li onClick={clickEffect ? clickEffect : null}
                                 className={hasClass ? hasClass : null}>{text}</li>
                         </Link>

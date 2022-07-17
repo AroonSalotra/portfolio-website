@@ -2,7 +2,7 @@
     /* background: rgba(153, 86, 86, 0.507); */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
 
     p, h1, h2, h3 {
         padding-left: 1rem;
