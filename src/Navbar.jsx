@@ -1,21 +1,25 @@
 import { useState } from "react";
 import { BsBoxArrowLeft, BsBoxArrowRight } from "react-icons/bs"
 
-const Sidebar = () => {
-    const [display, setDisplay] = useState("sidebar")
+const Navbar = () => {
+    const [display, setDisplay] = useState("Navbar")
     const [hover, setHover] = useState("hover-color cursor-pointer")
-    const [rotate, setRotate] = useState("rotate-180 icon-sidebar")
+    const [rotate, setRotate] = useState("rotate-180 icon-Navbar")
+    const [opacity, setOpacity] = useState("")
 
     const handleClick = () => {
 
-        if (display === "sidebar") {
-            setDisplay("onscreen sidebar")
+        if (display === "Navbar") {
+            setDisplay("onscreen Navbar")
             setHover("")
-            setRotate("icon-sidebar")
+            setRotate("icon-Navbar")
+            setOpacity("opacity-off")
         } else {
-            setDisplay("sidebar")
+            setDisplay("Navbar")
             setHover("hover-color cursor-pointer")
-            setRotate("rotate-180 icon-sidebar")
+            setRotate("rotate-180 icon-Navbar padding-left")
+            setOpacity("")
+
         }
     }
 
@@ -24,6 +28,7 @@ const Sidebar = () => {
         { text: "Contact", hasClass: (hover) },
         { text: "Work", hasClass: (hover) },
         { text: "Resume", hasClass: (hover) },
+        { text: "", hasClass: "li-break" + (opacity) },
         { text: <BsBoxArrowRight />, hasClass: (rotate), clickEffect: () => handleClick() },
     ]
 
@@ -41,4 +46,4 @@ const Sidebar = () => {
     );
 }
 
-export default Sidebar;
+export default Navbar;

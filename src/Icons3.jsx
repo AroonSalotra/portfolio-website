@@ -7,15 +7,15 @@ const Icons3 = () => {
     return (
         <div className="skills-container">
             <div className="skills-content">
-                <SiRedux />
+                <SiRedux className="icon" />
                 <p>Redux</p>
             </div>
             <div className="skills-content">
-                <BsFillBootstrapFill />
+                <BsFillBootstrapFill className="icon" />
                 <p>Bootstrap</p>
             </div>
             <div className="skills-content">
-                <GrReactjs/>
+                <GrReactjs className="icon" />
                 <p>React</p>
             </div>
         </div>

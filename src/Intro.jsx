@@ -1,5 +1,5 @@
 import Icons1s from "./Icons1";
-import Contact from "./Contact";
+import ContactButton from "./ContactButton";
 import Monitor from "./Monitor";
 
 const Intro = () => {
@@ -14,7 +14,7 @@ const Intro = () => {
                         with HTML, CSS, Javascript & React alongside using Git and Figma for version
                         control and pre production </p>
                 </div>
-                <Contact />
+                <ContactButton />
                 {/* <Monitor /> */}
             </div>
             {/* <SkillIcons /> */}

@@ -1,4 +1,4 @@
-import Contact from "./Contact";
+import ContactButton from "./ContactButton";
 
 const Monitor = () => {
     return (

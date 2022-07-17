@@ -6,16 +6,16 @@ const Icons2 = () => {
     return (
         <div className="skills-container">
             <div className="skills-content">
-                <AiFillGithub />
-                <p>Github</p>
+                <AiFillGithub className="icon" />
+                <p>Git</p>
             </div>
             <div className="skills-content">
-                <FiFigma />
+                <FiFigma className="icon" />
                 <p>Figma</p>
             </div>
             <div className="skills-content">
-                <DiTrello />
-                <p>Trello</p>
+                <DiTrello className="icon" />
+                <p>Scrum</p>
             </div>
         </div>
     );
