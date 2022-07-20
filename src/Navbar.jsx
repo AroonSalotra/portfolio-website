@@ -8,13 +8,13 @@ const Navbar = () => {
     ]
 
     return (
-        <div className="navbar-container">
-            <ul>
+        <>
+            <ul className="navbar-content">
                 {listContent.map(({ text, id }) =>
                     <li key={id}>{text}</li>
                 )}
             </ul>
-        </div>
+        </>
     );
 }
 

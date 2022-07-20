@@ -1,8 +1,8 @@
 const Icons = (props) => {
     return (
-        <div className="icon-content">
+        <div className="icon-content icon-size-m">
             {props.icon}
-            <p>{props.text}</p>
+            <p className="icon-text">{props.text}</p>
         </div>
     );
 }

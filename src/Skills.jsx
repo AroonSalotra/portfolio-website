@@ -8,11 +8,11 @@ import { SiTypescript, SiRedux } from "react-icons/si"
 
 const Skills = (props) => {
     return (
-        <div className="skills-container">
+        <div className="skills-container content-align">
             {/* <div className="flex-break"></div> */}
-            <h1 className="software">Software</h1>
+            <h1 className="subtitle highlight-s">Software</h1>
             <div className="icon-container">
-                <div className="">
+                <div className="icon-row">
                     <Icons icon={<AiFillHtml5 />} text={"HTML"} />
                     <Icons icon={<DiCss3 />} text={"CSS"} />
                     <Icons icon={<IoLogoJavascript />} text={"Javascript"} />
@@ -24,7 +24,7 @@ const Skills = (props) => {
                     <Icons icon={<BsFillBootstrapFill />} text={"Bootstrap"} />
                 </div>
 
-                <div className="">
+                <div className="icon-row">
                     <Icons icon={<AiFillGithub />} text={"Git"} />
                     <Icons icon={<SiRedux />} text={"Redux"} />
                 </div>
