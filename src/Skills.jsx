@@ -1,6 +1,34 @@
-const Skills = () => {
+import Icons from "./Icons"
+import { FaReact } from "react-icons/fa"
+import { BsFillBootstrapFill } from "react-icons/bs"
+import { AiFillHtml5, AiFillGithub } from "react-icons/ai"
+import { DiCss3 } from "react-icons/di"
+import { IoLogoJavascript } from "react-icons/io"
+import { SiTypescript, SiRedux } from "react-icons/si"
+
+const Skills = (props) => {
     return (
         <div className="skills-container">
+            {/* <div className="flex-break"></div> */}
+            <h1 className="software">Software</h1>
+            <div className="icon-container">
+                <div className="">
+                    <Icons icon={<AiFillHtml5 />} text={"HTML"} />
+                    <Icons icon={<DiCss3 />} text={"CSS"} />
+                    <Icons icon={<IoLogoJavascript />} text={"Javascript"} />
+                </div>
+
+                <div className="icon-row">
+                    <Icons icon={<SiTypescript />} text={"Typescript"} />
+                    <Icons icon={<FaReact />} text={"React"} />
+                    <Icons icon={<BsFillBootstrapFill />} text={"Bootstrap"} />
+                </div>
+
+                <div className="">
+                    <Icons icon={<AiFillGithub />} text={"Git"} />
+                    <Icons icon={<SiRedux />} text={"Redux"} />
+                </div>
+            </div>
         </div>
     );
 }
