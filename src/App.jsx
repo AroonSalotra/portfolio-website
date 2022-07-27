@@ -5,6 +5,7 @@ import About from './About';
 import Skills from './Skills';
 import Work from './Work';
 import Navbar from './Navbar';
+import Contact from './Contact';
 
 import Intro from './Intro';
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Intro />
       <About />
       <Skills />
-      {/* <Work /> */}
+      <Work />
+      <Contact />
       {/* <Debug /> */}
     </div>
 

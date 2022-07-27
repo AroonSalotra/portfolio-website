@@ -8,7 +8,7 @@ import { SiTypescript, SiRedux } from "react-icons/si"
 
 const Skills = (props) => {
     return (
-        <div className="skills-container content-align">
+        <div className="about-container content-align">
             {/* <div className="flex-break"></div> */}
             <h1 className="subtitle highlight-s">Software</h1>
             <div className="icon-container">
