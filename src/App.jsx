@@ -1,5 +1,7 @@
 import './App.css';
 import "./index.css";
+import { useState } from 'react';
+import { send } from 'emailjs-com';
 import Debug from './Debug';
 import About from './About';
 import Skills from './Skills';

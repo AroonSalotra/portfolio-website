@@ -15,26 +15,26 @@ const Contact = () => {
         const timer = setTimeout(() => {
             if (display !== "display-hide") {
                 setDisplay("display-hide")
-            } 
-        }, 2000);
+            }
+        }, 1500);
         return () => clearTimeout(timer);
-      }, [display]);
+    }, [display]);
 
     return (
         <div className="content-align">
             <h1 className="subtitle highlight-s">Contact</h1>
             <div className="contact-split">
-                <ContactForm/>
+                <ContactForm />
                 <div className="content-break" />
+                {/* <div className="contact-text"> */}
                 <div className="contact-text">
-                    <div>
-                        <p>Or copy
-                            <AiFillMail className="contact-icon"
-                                onClick={() => handleClick()} />
-                            to clipboard</p>
-                    </div>
-                    <p className={`${display} contact-notify`}>Copied!</p>
+                    <p>Or click:
+                        <AiFillMail className="contact-icon"
+                            onClick={() => handleClick()} />
+                        to copy</p>
                 </div>
+                <p className={`${display} contact-notify`}>Copied!</p>
+                {/* </div> */}
             </div>
         </div>
     );

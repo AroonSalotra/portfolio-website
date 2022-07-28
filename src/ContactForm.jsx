@@ -1,20 +1,69 @@
 import { useState } from "react";
+import { send } from "emailjs-com/es/methods/send/send";
 
 const ContactForm = (props) => {
     const [display, setDisplay] = useState("clr-dark")
+
+    const [toSend, setToSend] = useState({
+        from_name: "",
+        email: "",
+        message: "",
+        reply_to: ""
+    })
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        send(
+            //ServiceID
+            'service_r76eupk',
+            //TemplateID
+            'template_u9xaust',
+            toSend,
+            //UserID
+            'mxTTQBdikoSMlFRj9'
+        )
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert("message sent")
+            })
+            .catch((err) => {
+                console.log('FAILED...', err);
+                alert("error sending message, please try again")
+            });
+
+    };
+
+    const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+    };
+
+    console.log(toSend)
+
+
     return (
-        <form action="" className={`form-container ${props.display}`}>
+        <form action="" className={`form-container ${props.display}`} onSubmit={onSubmit} >
+        
             <label htmlFor=""> Name <br />
-                <input type="text" />
+                <input type="text" name="from_name" id="name"
+                    value={toSend.from_name}
+                    onChange={handleChange} />
             </label>
+
             <label htmlFor=""> Email <br />
-                <input type="email" />
+                <input type="email" name="email"
+                    value={toSend.email}
+                    onChange={handleChange} />
             </label>
+
             <label htmlFor=""> Comment <br />
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="message" id="" cols="20" rows="10" 
+                    value={toSend.message}
+                    onChange={handleChange} />
             </label>
-            <button type="button"> <span className="btn-form">Submit</span> </button>
-            
+
+            <button id="form-btn">Send</button>
+
         </form>
     );
 }
