@@ -44,14 +44,14 @@ const ContactForm = (props) => {
     return (
         <form action="" className={`form-container ${props.display}`} onSubmit={onSubmit} >
         
-            <label htmlFor=""> Name <br />
+            <label htmlFor=""> Your Name <br />
                 <input type="text" name="from_name" id="name"
                     value={toSend.from_name}
                     onChange={handleChange} />
             </label>
 
-            <label htmlFor=""> Email <br />
-                <input type="email" name="email"
+            <label htmlFor=""> Your Email <br />
+                <input type="email" name="email" required
                     value={toSend.email}
                     onChange={handleChange} />
             </label>

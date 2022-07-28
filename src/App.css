@@ -29,6 +29,10 @@ body {
   font-family: var(--font)
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .intro-container {
   background: var(--clr-a);
   display: flex;
@@ -114,10 +118,14 @@ body {
 .form-container input, textarea, button {
   width: 30rem;
   background: rgb(212, 211, 204);
+  background: wheat;
   padding: 15px;
   font-size: 1.4rem;
   resize: none;
   font-family: var(--font);
+  border-radius: 5px;
+  /* border: none; */
+  border: 1px solid var(--clr-a);
 }
 
 .form-container input {
@@ -126,8 +134,14 @@ body {
 
 #form-btn {
   cursor: pointer;
+  background: var(--clr-a);
+  transition: all 30ms ease;
 }
 
+#form-btn:active {
+  transform: scale(1.05);
+  transition: all 30ms ease;
+}
 
 .work-container {
   display: grid;
@@ -168,8 +182,7 @@ body {
   display: flex;
 }
 
-.contact-text div {
-}
+.contact-text div {}
 
 .contact-icon {
   cursor: pointer;
