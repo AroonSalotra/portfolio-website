@@ -11,13 +11,6 @@ const Contact = () => {
         setDisplay("")
     }
 
-    // setTimeout(() => {
-    //     console.log("state has changed")
-    // }, [display]);
-
-    // useEffect(() => {
-    // }, [display])
-
     useEffect(() => {
         const timer = setTimeout(() => {
             if (display !== "display-hide") {
@@ -40,7 +33,7 @@ const Contact = () => {
                                 onClick={() => handleClick()} />
                             to clipboard</p>
                     </div>
-                    <p className={display}>Copied!</p>
+                    <p className={`${display} contact-notify`}>Copied!</p>
                 </div>
             </div>
         </div>

@@ -169,8 +169,14 @@ body {
 }
 
 .contact-notify {
-  /* position: absolute; */
+  position: absolute;
+  transform: translate(6rem, 3rem);
+  color: white;
+  background: var(--clr-c);
+  color: var(--clr-a);
+  padding: 5px;
 }
+
 
 .work-links {
   display: flex;
