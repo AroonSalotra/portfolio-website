@@ -75,8 +75,26 @@ html {
   color: var(--clr-a);
   font-weight: 600;
   font-size: 1.5rem;
-  border-bottom: 10px solid var(--clr-a);
+  /* border-bottom: 10px solid var(--clr-a); */
   padding: 1rem;
+}
+
+.navbar-content {
+  position: fixed;
+  top: -5rem;
+  width: 100%;
+  transition: top 0.5s;
+}
+
+
+.navbar-fixed {
+  /* position: fixed;
+  width: 100vw;
+  transition: all 1s ease; */
+}
+
+.navbar-fixed {
+  top: 0rem;
 }
 
 .navbar-content li {
